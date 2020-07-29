@@ -1,0 +1,55 @@
+.sub-nav__list{
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: -25px;
+  min-width: 300px;
+  background-color: $whiteColor;
+}
+.nav__list > li:hover .sub-nav__list{
+  display: block;
+}
+
+.nav{
+  &__link{
+    position: relative;
+  }&__link:hover::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $redColor;
+  }
+}
+.sub-nav__link > a{
+  position: relative;
+  z-index: 10;
+  color: $blackColor;
+  padding: .8rem 2.5rem;
+  width: 100%;
+  transition: .5s;
+  &:hover{
+    background-color: $redColor;
+    color: $whiteColor;
+  }&:before{
+    content: "\f054";
+    position: absolute;
+    left: 20px;
+    color: $blackColor;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: .7rem;
+  }&:hover:before{
+    color: $whiteColor;
+  }
+}
+.sub__nav > a:before{
+    content: "\f0dd";
+    position: absolute;
+    right: -20px;
+    color: $whiteColor;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1rem;
+}

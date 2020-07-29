@@ -1,0 +1,47 @@
+.calculator{
+  flex: 1 0 auto;
+  &__select{
+    margin-top: 5rem;
+  }&__destanation{
+    @include flexStyle(normal, normal, row);
+  }&__item{
+    padding-right: 2rem;
+    @include flexStyle(normal, normal, column);
+  }
+}
+
+
+.calculator__item > select,input{
+  min-height: 35px;
+  width: 100%;
+  padding: 0 1rem;
+  border: none;
+  background-color: $lightGreyColor;
+  color: $blackColor;
+}
+.weigh{
+  position: relative;
+  flex: 0 0 15%;
+  &:before{
+    position: absolute;
+    right: 45px;
+    bottom: 5px;
+    content: "\f0dd";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: $blackColor;
+    font-size: 1rem;
+  }
+}
+.fromLocation, .toLocation{
+  flex: 0 0 30%
+}
+
+@media screen and (max-width:$tablet) {
+  .calculator__destanation{
+    flex-flow: column;
+  }
+  .calculator__item{
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,43 @@
+.transportation{
+  flex: 1 0 auto;
+  background-color: $lightGreyColor;
+  &__link{
+    color: $greenColor;
+    text-decoration: underline;
+  }
+}
+.transportation__description > h3{
+  color: $blackColor;
+}
+.item{
+  @include flexStyle(center, flex-start, column);
+}
+
+.transportation__item{
+  position: relative;
+  &::before{
+    position: absolute;
+    right: -50px;
+    top: 35px;
+    content: "\f30b";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: $blackColor;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .transportation__item{
+    position: relative;
+    &::before{
+      position: absolute;
+      top: -25px;
+      content: "\f30b";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: $blackColor;
+      font-size: 1rem;
+    }
+  }
+}

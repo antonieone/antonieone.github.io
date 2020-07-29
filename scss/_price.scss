@@ -1,0 +1,142 @@
+.price{
+  flex: 1 0 auto;
+  &__weigh{
+    position: relative;
+    display: flex;
+  }&__weigh::after{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 25px solid transparent;
+    border-top: 40px solid $wineColor;
+    width: 60%;
+  }&__item{
+    position: relative;
+    width: 125px;
+    padding: .5rem 1rem;
+    cursor: pointer;
+  }&__item > a{
+    position: relative;
+    color: $whiteColor;
+    z-index: 2;
+  }
+}
+
+.breadcrumb{
+  margin: 1rem 0;
+  &__list{
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  }&__item > a{
+  color: $wineColor;
+  }&__item{
+  position: relative;
+  padding-right: 1.5rem;
+  &:not(:last-child):before{
+    position: absolute;
+    right: 10px;
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: $blackColor;
+    font-size: .5rem;
+    }
+  }
+}
+
+
+.price__item::before{
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: 25px solid transparent;
+  border-top: 40px solid $wineColor;
+  width: 80%;
+}
+.price__weigh > li:hover::before{
+  content: '';
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: 25px solid transparent;
+  border-top: 40px solid $redColor;
+  width: 80%;
+}
+
+.price__weigh::after{
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-right: 25px solid transparent;
+  border-top: 40px solid $wineColor;
+  width: 60%;
+}
+
+.trucks-price{
+  display: flex;
+  flex-direction: row;
+  &__image{
+    padding: 1rem;
+  }&__description-model{
+    display: flex;
+    padding: 2rem;
+    width: 100%;
+  }&__picture{
+    display: flex;
+    flex: 1;
+    &__image{
+      flex: 1;
+      position: relative;
+      width: 100%;
+      padding-bottom: 15%;
+      min-height: 100px;
+      overflow: hidden;
+      & > img{
+        @include img;
+      }
+    }
+  }&__description{
+    flex: 1;
+    background-color: $lightGreyColor;
+  }&__model{
+    flex: 1;
+  }
+}
+
+.description-truck__list{
+  flex: 1;
+  margin-bottom:1rem;
+  & > li:nth-child(even){
+    padding: 1rem 0;
+  }
+}
+
+@media screen and (max-width:$tablet) {
+  .price{
+    &__weigh{
+      flex-flow: column;
+    }&__item{
+      margin: .5rem 0;
+    }&__weigh::after{
+      transform: scale(0);
+      width: 0;
+    }
+  }
+  .trucks{
+    flex-flow: column;
+    &__picture{
+      flex-flow: column;
+    }&__image{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

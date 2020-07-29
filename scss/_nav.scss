@@ -1,0 +1,131 @@
+.wrapper{
+  @include flexStyle(normal, normal, column);
+  min-height: 100%;
+  overflow: hidden;
+}
+.header{
+  position: relative;
+}
+.main__content{
+  padding: 4rem 0;
+}
+.nav__container{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.logo{
+  @include flexStyle(center, center, row);
+  margin:0 5rem 0 1rem;
+  @include fontStyle(2rem, $wineColor);
+  font-weight: 900;
+}
+
+.nav{
+
+  @include flexStyle(baseline, center, row);
+  &__logo{
+    flex: 0 0 30%;
+    @include flexStyle(center, flex-end, row);
+  }&__main{
+    flex: 0 0 70%;
+    z-index: 1;
+    @include flexStyle(center, center, column);
+    align-self: flex-start;
+    background-color: $whiteColor;
+  }&__title{
+    width: 100%;
+    margin: 2rem 0;
+  }&__title-item > a{
+    @include fontStyle(1.1rem, $greyColor);
+    font-weight: bold;
+  }&__subtitle{
+    width: 100%;
+  }&__subtitle::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    border-bottom: 60px solid $wineColor;
+    border-left: 30px solid transparent;
+    transform: translateX(-4rem);
+  }&__link{
+    position: relative;
+    padding: 18px 0;
+  }
+}
+.nav__logo::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  height: 0;
+  width: 100%;
+  border-top: 110px solid $lightGreyColor;
+  border-right: 60px solid transparent;
+  transform: translateX(-1rem);
+}
+.button{
+  @include button;
+  transition: .5s;
+}
+.button_nav:hover{
+  background-color: $wineColor;
+  color: $whiteColor;
+}
+.phone::before,
+.email::before{
+  content: "\f87b";
+  margin-right: 1rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: $wineColor;
+  font-size: 1.5rem;
+}
+.email::before{
+  content: "\f0e0";
+}
+.nav__list,
+.nav__title-list{
+  @include flexStyle(center, space-between, row);
+}
+
+
+@media screen and (max-width: $desktop) {
+  .container{
+    padding: 5rem 1rem;
+  }
+  .nav{
+    flex-flow: column;
+    &__main{
+      width: 100%;
+    }&__title{
+      margin: 0;
+    }&__title-list{
+      display: none;
+    }&__list{
+      justify-content: flex-end;
+    }&__logo{
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }&__logo::before{
+      border-right: 0;
+      transform: translateX(0);
+    }&__subtitle::before{
+      left: 0;
+      border-left: 0;
+      transform: translateX(0);
+    }
+  }
+  .logo{
+    margin-right: 0;
+  }
+
+
+}

@@ -1,0 +1,68 @@
+.trucks{
+  &__description{
+    position: relative;
+    @include flexStyle(center, center, column);
+    width: 100%;
+  }&__list{
+    display: inherit;
+    flex-flow: row;
+    width: 100%;
+  }&__item{
+    width: 100%;
+  }&__truckDescription{
+    width: 100%;
+  }&__item-description{
+    display: flex;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+    & > li {
+      margin: 0 2rem;
+      color: $whiteColor;
+    }
+  }&__imageTruck{
+    position: relative;
+    padding-bottom: 45%;
+    min-height: 175px;
+  }&__imageTruck > img{
+    @include img;
+  }
+}
+
+.trucks__item-description::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 365px;
+  background-color: $wineColor;
+  transform: skewX(-35deg);
+}.trucks__item-description::after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -10px;
+  height: 100%;
+  width: 125px;
+  background-color: $redColor;
+  transform: skewX(-35deg);
+}
+@media screen and (max-width:$tablet) {
+  .trucks{
+    &__list{
+      flex-flow: column;
+    }
+  }
+  .trucks__item-description::before{
+    width: 300px;
+  }.trucks__item-description::after{
+    width: 100px;
+  }
+  .trucks__item-description > li{
+    margin: 0 1rem;
+  }
+}

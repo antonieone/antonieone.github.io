@@ -1,0 +1,29 @@
+.ourServices{
+  flex: 1 0 auto;
+  &__subtitle{
+    margin-top: 5rem;
+  }&__description{
+    margin: 2rem 0;
+  }&__description > ul{
+    margin: 2rem 0;
+    @include flexStyle(flex-start, center, column);
+  }&__description > ul > li{
+    position: relative;
+    display: inline-block;
+    width: 215px;
+    margin: .5rem 0;
+    padding: 0 1rem;
+    background-color: $greenColor;
+    color: $whiteColor;
+  }&__description > ul > li:before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 25px solid $greenColor;
+    border-right: 25px solid transparent;
+  }
+}

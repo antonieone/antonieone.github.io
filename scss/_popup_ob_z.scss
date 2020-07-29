@@ -1,0 +1,10 @@
+.body-modal_ob{
+  height: 400px;
+}
+
+.modal_ob_list{
+  & > ul > li:first-child{
+    color: $whiteColor;
+    padding-left: 3rem;
+  }
+}

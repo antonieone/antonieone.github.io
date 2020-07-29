@@ -1,0 +1,14 @@
+.documents{
+  flex: 1 0 auto;
+  &__subtitle > h3{
+    padding-bottom: 2rem;
+  }&__list,&__item{
+    @include flexStyle(center, flex-start, row);
+  }&__item:nth-child(even){
+    padding-left: 1rem;
+  }&__item > a{
+    color: $greenColor;
+    text-decoration: underline;
+    padding-left: 1rem;
+  }
+}

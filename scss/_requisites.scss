@@ -1,0 +1,14 @@
+.requisites{
+  flex: 1 0 auto;
+  &__subtitle{
+    margin-top: 5rem;
+  }&__download{
+    @include flexStyle(center, flex-start, row);
+  }&__download{
+    margin-top: 2rem;
+  }&__download > a{
+    color: $greenColor;
+    text-decoration: underline;
+    padding-left: 1rem;
+  }
+}

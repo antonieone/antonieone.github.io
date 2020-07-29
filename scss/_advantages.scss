@@ -1,0 +1,78 @@
+.advanteges{
+  flex: 1 0 auto;
+  background-color: $wineColor;
+  &__container{
+    position: relative;
+  }&__title > h2{
+    color: $whiteColor;
+  }&__description > p{
+    color: $whiteColor;
+  }
+}
+
+.description{
+  @include flexStyle(center, flex-start, column);
+  margin-top: 1rem;
+  & > h3{
+    margin-bottom: 1rem;
+    @include fontStyle(1.3rem, $whiteColor);
+  }& > p{
+    text-align: center;
+  }
+}
+.list-icon{
+  @include flexStyle(baseline, space-around, row);
+  width: 100%;
+}
+.icon{
+  height: 65px;
+  width: 65px;
+}
+.subtitle-list{
+  @include flexStyle(baseline, center, row);
+}
+
+.advanteges{
+  overflow-x: hidden;
+}
+
+.advanteges__container::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100%;
+  border-top: 30px solid $whiteColor;
+  border-right: 20px solid transparent;
+  z-index: 1;
+  transform: translateX(-48rem);
+}
+.advanteges__container::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  border-bottom: 30px solid $lightGreyColor;
+  border-left: 20px solid transparent;
+  z-index: 1;
+  transform: translateX(50rem);
+}
+
+
+
+@media screen and (max-width: $tablet) {
+  .subtitle-list{
+    flex-flow: column;
+  }
+  .item{
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (max-width: $mobile) {
+  .list-icon{
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
