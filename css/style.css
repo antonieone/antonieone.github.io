@@ -672,17 +672,14 @@ template {
     color: #000;
     font-size: 1rem; }
 
-@media screen and (max-width: 768px) {
+.transportation__subtitle > ul:last-child > li:last-child::before {
+  content: ""; }
+
+@media screen and (max-width: 991px) {
   .transportation__item {
     position: relative; }
     .transportation__item::before {
-      position: absolute;
-      top: -25px;
-      content: "\f30b";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      color: #000;
-      font-size: 1rem; } }
+      content: ""; } }
 .trucks__description {
   position: relative;
   display: flex;
@@ -946,20 +943,14 @@ template {
   .price__weigh {
     position: relative;
     display: flex; }
-  .price__weigh::after {
-    content: '';
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-right: 25px solid transparent;
-    border-top: 40px solid #663333;
-    width: 60%; }
+  .price__link {
+    overflow: hidden; }
   .price__item {
     position: relative;
     width: 125px;
     padding: .5rem 1rem;
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: #663333; }
   .price__item > a {
     position: relative;
     color: #FFF;
@@ -985,35 +976,24 @@ template {
       color: #000;
       font-size: .5rem; }
 
-.price__item::before {
+.price__item:last-child::before {
   content: '';
-  z-index: -1;
   position: absolute;
+  right: 0;
   top: 0;
-  left: 0;
-  border-right: 25px solid transparent;
-  border-top: 40px solid #663333;
-  width: 80%; }
+  border-bottom: 40px solid #FFF;
+  border-left: 30px solid transparent; }
 
-.price__weigh > li:hover::before {
-  content: '';
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-right: 25px solid transparent;
-  border-top: 40px solid #d12c2c;
-  width: 80%; }
+.price__item:hover {
+  background: red; }
 
-.price__weigh::after {
+.price__item:not(:last-child):hover::before {
   content: '';
-  z-index: -1;
   position: absolute;
+  right: 0;
   top: 0;
-  left: 0;
-  border-right: 25px solid transparent;
-  border-top: 40px solid #663333;
-  width: 60%; }
+  border-bottom: 40px solid #663333;
+  border-left: 30px solid transparent; }
 
 .trucks-price {
   display: flex;
@@ -1046,6 +1026,7 @@ template {
         object-fit: cover; }
   .trucks-price__description {
     flex: 1;
+    position: relative;
     background-color: #e6e6e6; }
   .trucks-price__model {
     flex: 1; }
@@ -1055,6 +1036,26 @@ template {
   margin-bottom: 1rem; }
   .description-truck__list > li:nth-child(even) {
     padding: 1rem 0; }
+
+.trucks-price__description::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 30px solid #FFF;
+  border-right: 30px solid transparent; }
+
+.trucks-price__description::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid #FFF;
+  border-left: 30px solid transparent; }
 
 @media screen and (max-width: 991px) {
   .price__weigh {
@@ -1071,7 +1072,26 @@ template {
       flex-flow: column; }
     .trucks__image {
       display: flex;
-      justify-content: center; } }
+      justify-content: center; }
+
+  .price__item::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom: 40px solid #FFF;
+    border-left: 30px solid transparent; }
+
+  .price__item:hover {
+    background: red; }
+
+  .price__item:not(:last-child):hover::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom: 40px solid #FFF;
+    border-left: 30px solid transparent; } }
 .popup {
   display: none;
   position: fixed;
@@ -1080,86 +1100,79 @@ template {
   top: 0;
   width: 100%;
   height: 100%; }
-
-.popup__open {
-  display: block; }
-
-.popup__overlay {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(49, 41, 41, 0.88); }
-
-.popup__body {
-  position: relative;
-  overflow-x: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 400px;
-  height: 600px;
-  background-color: #FFF; }
-  .popup__body > button {
-    width: 35%;
-    border: 1px solid #663333;
-    color: #663333; }
-  .popup__body:before {
-    content: "";
+  .popup__open {
+    display: block; }
+  .popup__overlay {
     position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    height: 0;
-    width: 100%;
-    border-top: 45px solid #633;
-    border-right: 30px solid transparent;
-    transform: translateX(-10rem); }
-
-.popup__list {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  color: #663333;
-  width: 100%; }
-  .popup__list > ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: row; }
-  .popup__list > ul > li:first-child {
-    color: #FFF;
-    padding-left: 6rem; }
-  .popup__list > ul > li:nth-child(2) {
-    margin-left: 3rem; }
-
-.popup__close {
-  color: #663333; }
-  .popup__close > i {
-    padding: 10px;
-    color: #663333;
-    cursor: pointer; }
-
-.popup__container {
-  max-width: 250px; }
-  .popup__container > textarea {
-    padding: .6rem;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
-    height: 120px;
-    border: none;
-    background-color: #e6e6e6; }
-
-.popup__container {
-  align-self: center; }
-  .popup__container > input {
-    border: none;
-    background-color: #e6e6e6;
-    padding: .6rem; }
+    height: 100%;
+    background-color: rgba(49, 41, 41, 0.88); }
+  .popup__body {
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    background-color: #FFF; }
+    .popup__body > button {
+      width: 35%;
+      border: 1px solid #663333;
+      color: #663333; }
+  .popup__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: #663333;
+    width: 100%; }
+    .popup__list > ul {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: row; }
+    .popup__list > ul:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -145px;
+      background-color: #663333;
+      transform: skewX(-35deg);
+      height: 100%;
+      z-index: -1;
+      width: 100%; }
+    .popup__list > ul > li:first-child {
+      color: #FFF;
+      padding-left: 3rem; }
+    .popup__list > ul > li:last-child {
+      margin-left: 3rem;
+      display: flex;
+      align-items: center; }
+  .popup__close {
+    color: #663333; }
+    .popup__close > i {
+      padding: 10px;
+      color: #663333;
+      cursor: pointer; }
+  .popup__container {
+    max-width: 250px; }
+    .popup__container > textarea {
+      padding: .6rem;
+      width: 100%;
+      height: 120px;
+      border: none;
+      background-color: #e6e6e6; }
+    .popup__container > input {
+      border: none;
+      background-color: #e6e6e6;
+      padding: .6rem; }
 
 .checkbox {
   position: relative;
@@ -1220,9 +1233,5 @@ template {
     width: 300px; } }
 .body-modal_ob {
   height: 400px; }
-
-.modal_ob_list > ul > li:first-child {
-  color: #FFF;
-  padding-left: 4rem; }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,18 +6,15 @@
   top: 0;
   width: 100%;
   height: 100%;
-}
-.popup__open{
+  &__open{
   display: block;
-}
-.popup__overlay{
+  }&__overlay{
   position: absolute;
   @include flexStyle(center, center, column);
   width: 100%;
   height: 100%;
   background-color: rgba(49, 41, 41, 0.88);
-}
-.popup__body{
+  }&__body{
   position: relative;
   overflow-x: hidden;
   @include flexStyle(center, center, column);
@@ -28,20 +25,8 @@
     width: 35%;
     border: 1px solid $wineColor;
     color: $wineColor;
-  }&:before{
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    height: 0;
-    width: 100%;
-    border-top: 45px solid #633;
-    border-right: 30px solid transparent;
-    transform: translateX(-10rem);
   }
-}
-.popup__list{
+  }&__list{
   position: absolute;
   top: 0;
   left: 0;
@@ -49,24 +34,35 @@
   color: $wineColor;
   width: 100%;
   & > ul{
-    @include flexStyle(center, space-between, row);
+    position: relative;
+    @include flexStyle(center, space-around, row);
+  }& > ul:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -145px;
+    background-color: #663333;
+    transform: skewX(-35deg);
+    height: 100%;
+    z-index: -1;
+    width: 100%;
   }& > ul > li:first-child{
     color: $whiteColor;
-    padding-left: 6rem;
-  }& > ul > li:nth-child(2){
+    padding-left: 3rem;
+  }& > ul > li:last-child{
     margin-left: 3rem;
+    display: flex;
+    align-items: center;
   }
-}
-.popup__close{
+  }
+  &__close{
   color: $wineColor;
   & > i{
     padding: 10px;
     color: $wineColor;
     cursor: pointer;
   }
-}
-
-.popup__container{
+  }&__container{
   max-width: 250px;
   & > textarea{
     padding: .6rem;
@@ -74,16 +70,14 @@
     height: 120px;
     border: none;
     background-color: $lightGreyColor;
-  }
-}
-.popup__container{
-  align-self: center;
-  & > input{
+  }& > input{
     border: none;
     background-color: $lightGreyColor;
     padding: .6rem;
   }
+  }
 }
+
 .checkbox{
   position: relative;
   padding: 1rem 0;

@@ -3,20 +3,14 @@
   &__weigh{
     position: relative;
     display: flex;
-  }&__weigh::after{
-    content: '';
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-right: 25px solid transparent;
-    border-top: 40px solid $wineColor;
-    width: 60%;
+  }&__link{
+    overflow: hidden;
   }&__item{
     position: relative;
     width: 125px;
     padding: .5rem 1rem;
     cursor: pointer;
+    background-color: $wineColor;
   }&__item > a{
     position: relative;
     color: $whiteColor;
@@ -48,37 +42,26 @@
 }
 
 
-.price__item::before{
+.price__item:last-child::before{
   content: '';
-  z-index: -1;
   position: absolute;
+  right: 0;
   top: 0;
-  left: 0;
-  border-right: 25px solid transparent;
-  border-top: 40px solid $wineColor;
-  width: 80%;
+  border-bottom: 40px solid #FFF;
+  border-left: 30px solid transparent;
 }
-.price__weigh > li:hover::before{
+.price__item:hover{
+  background: red;
+}
+.price__item:not(:last-child):hover::before{
   content: '';
-  z-index: 1;
   position: absolute;
+  right: 0;
   top: 0;
-  left: 0;
-  border-right: 25px solid transparent;
-  border-top: 40px solid $redColor;
-  width: 80%;
+  border-bottom: 40px solid $wineColor;
+  border-left: 30px solid transparent;
 }
 
-.price__weigh::after{
-  content: '';
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-right: 25px solid transparent;
-  border-top: 40px solid $wineColor;
-  width: 60%;
-}
 
 .trucks-price{
   display: flex;
@@ -105,6 +88,7 @@
     }
   }&__description{
     flex: 1;
+    position: relative;
     background-color: $lightGreyColor;
   }&__model{
     flex: 1;
@@ -117,6 +101,28 @@
   & > li:nth-child(even){
     padding: 1rem 0;
   }
+}
+
+.trucks-price__description::before{
+  content: '';
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 0;
+	height: 0;
+  border-top: 30px solid #FFF;
+  border-right: 30px solid transparent;
+}
+
+.trucks-price__description::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+	height: 0;
+  border-bottom: 30px solid #FFF;
+  border-left: 30px solid transparent;
 }
 
 @media screen and (max-width:$tablet) {
@@ -139,4 +145,25 @@
       justify-content: center;
     }
   }
+  // СПОСОБ 1
+  .price__item::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom: 40px solid #FFF;
+    border-left: 30px solid transparent;
+  }
+  .price__item:hover{
+    background: red;
+  }
+  .price__item:not(:last-child):hover::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-bottom: 40px solid $whiteColor;
+    border-left: 30px solid transparent;
+  }
+  // СПОСОБ КОНЕЦ
 }
