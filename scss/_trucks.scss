@@ -9,7 +9,7 @@
     width: 100%;
   }&__item{
     width: 100%;
-  }&__truckDescription{
+  }&__truck-description{
     width: 100%;
   }&__item-description{
     display: flex;
@@ -21,11 +21,11 @@
       margin: 0 2rem;
       color: $whiteColor;
     }
-  }&__imageTruck{
+  }&__image-truck{
     position: relative;
     padding-bottom: 45%;
     min-height: 175px;
-  }&__imageTruck > img{
+  }&__image-truck > img{
     @include img;
   }
 }
@@ -51,12 +51,16 @@
   background-color: $redColor;
   transform: skewX(-35deg);
 }
-@media screen and (max-width:$tablet) {
+
+@media screen and (max-width:$mobile){
   .trucks{
     &__list{
       flex-flow: column;
     }
   }
+}
+
+@media screen and (max-width:$tablet){
   .trucks__item-description::before{
     width: 300px;
   }.trucks__item-description::after{

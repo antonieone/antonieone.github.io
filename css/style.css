@@ -155,8 +155,8 @@ template {
 .nav__mobile-links {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: 35%;
   height: 100vh;
   z-index: -1;
   display: flex;
@@ -165,7 +165,7 @@ template {
   flex-direction: column;
   background-color: #e6e6e6;
   opacity: 0;
-  transform: scale(0);
+  transform: translateX(100%);
   transition: .5s; }
 .nav__mobile-item {
   padding: 1.5rem; }
@@ -177,10 +177,11 @@ template {
 
 .menu_open .nav__mobile-links {
   opacity: 1;
-  transform: scale(1); }
+  transform: translateX(0); }
 
 .menu_open .nav__icons .fa-times {
-  display: block; }
+  display: block;
+  transform: translateY(-8vh); }
 
 .menu_open .nav__icons .fa-bars {
   display: none; }
@@ -193,6 +194,9 @@ template {
   font-size: 1.5rem;
   color: #FFF; }
 
+@media screen and (max-width: 768px) {
+  .nav__mobile-links {
+    width: 100vw; } }
 @media screen and (max-width: 1199px) {
   .nav__mobile {
     display: block; }
@@ -693,7 +697,7 @@ template {
   width: 100%; }
 .trucks__item {
   width: 100%; }
-.trucks__truckDescription {
+.trucks__truck-description {
   width: 100%; }
 .trucks__item-description {
   display: flex;
@@ -704,11 +708,11 @@ template {
   .trucks__item-description > li {
     margin: 0 2rem;
     color: #FFF; }
-.trucks__imageTruck {
+.trucks__image-truck {
   position: relative;
   padding-bottom: 45%;
   min-height: 175px; }
-.trucks__imageTruck > img {
+.trucks__image-truck > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -741,10 +745,10 @@ template {
   background-color: #d12c2c;
   transform: skewX(-35deg); }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 768px) {
   .trucks__list {
-    flex-flow: column; }
-
+    flex-flow: column; } }
+@media screen and (max-width: 991px) {
   .trucks__item-description::before {
     width: 300px; }
 
@@ -1136,7 +1140,7 @@ template {
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
       flex-direction: row; }
     .popup__list > ul:before {
       content: '';
@@ -1149,12 +1153,12 @@ template {
       z-index: -1;
       width: 100%; }
     .popup__list > ul > li:first-child {
-      color: #FFF;
-      padding-left: 3rem; }
+      color: #FFF; }
     .popup__list > ul > li:last-child {
-      margin-left: 3rem;
+      position: relative;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      left: 4rem; }
   .popup__close {
     color: #663333; }
     .popup__close > i {

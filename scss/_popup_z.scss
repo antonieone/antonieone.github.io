@@ -35,7 +35,7 @@
   width: 100%;
   & > ul{
     position: relative;
-    @include flexStyle(center, space-around, row);
+    @include flexStyle(center, center, row);
   }& > ul:before{
     content: '';
     position: absolute;
@@ -48,11 +48,11 @@
     width: 100%;
   }& > ul > li:first-child{
     color: $whiteColor;
-    padding-left: 3rem;
   }& > ul > li:last-child{
-    margin-left: 3rem;
+    position: relative;
     display: flex;
     align-items: center;
+    left: 4rem;
   }
   }
   &__close{
