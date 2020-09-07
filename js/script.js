@@ -15,25 +15,46 @@ hamburgerMenu.addEventListener('click', function(){
 
 // ОБРАТНАЯ СВЯЗЬ НАЧАЛО
 
-let popup = document.querySelector('.popup-link');
+let popup = document.querySelectorAll('.popup-link');
 let popupOb = document.querySelector('.popupOb');
 let popupContent = document.querySelector('.popup__body');
 let closePop = document.querySelector('.popup__close');
 
+if(popup.length > 0){
+  for (let i = 0; i < popup.length; i++){
+    let popLink = popup[i];
+      popLink.addEventListener('click', function(e) {
+      let popupName = popLink.getAttribute('href').replace('#', '');
+      let curentPopup = document.getElementById(popupName);
 
-popup.addEventListener('click', function(e) {
-	let popupName = popup.getAttribute('href').replace('#', '');
-	let curentPopup = document.getElementById('popup');
 
-	popOpen(curentPopup);
+      closePop.addEventListener('click', function(){
+      		curentPopup.classList.remove('openPopup');
+          body.classList.toggle('body_scroll');
+      	});
 
-	closePop.addEventListener('click', function(){
-		curentPopup.classList.remove('openPopup');
-    body.classList.toggle('body_scroll');
-	});
+      popOpen(curentPopup);
 
-	e.preventDefault();
-});
+      e.preventDefault();
+    });
+  }
+}
+
+
+
+// popup.addEventListener('click', function(e) {
+// 	let popupName = popup.getAttribute('href').replace('#', '');
+// 	let curentPopup = document.getElementById('popup');
+//
+// 	popOpen(curentPopup);
+//
+// 	closePop.addEventListener('click', function(){
+// 		curentPopup.classList.remove('openPopup');
+//     body.classList.toggle('body_scroll');
+// 	});
+//
+// 	e.preventDefault();
+// });
 
 function popOpen(curentPopup){
 	curentPopup.classList.add('openPopup');
