@@ -9,15 +9,14 @@
   </head>
   <body>
     <div class="wrapper">
-    <header class="header">
+      <div class="content">
+        <header class="header">
 <!-- NAVIGATION START -->
       <nav class="nav nav__container">
-        <div class="nav__logo">
-          <img src="images/nav/logo.png" alt="">
-          <a href="index.html" class="logo">
+        <a href="index.html" class="logo">
+          <img src="images/nav/logo.svg" alt="Logo-Домашний переезд">
             Домашний <br> переезд
-          </a>
-        </div>
+        </a>
         <div class="nav__main">
           <div class="nav__title">
             <ul class="nav__title-list">
@@ -28,7 +27,7 @@
                 <a href="#">gruz11reg@yandex.ru</a>
               </li>
               <li class="nav__button">
-                <a href="#modal_ob" type="button" name="nav__button" class="button button_nav">
+                <a href="#popup__ob" type="button" name="nav__button" class="button button_nav popup-link">
                   Обратная связь
                 </a>
               </li>
@@ -114,10 +113,10 @@
         <div class="breadcrumb">
           <ul class="breadcrumb__list">
             <li class="breadcrumb__item">
-              <a href="#">Главная</a>
+              <a href="index.html">Главная</a>
             </li>
             <li class="breadcrumb__item">
-              <a href="#">О компании</a>
+              <a href="about.html">О компании</a>
             </li>
             <li class="breadcrumb__item">
               Реквезиты
@@ -141,6 +140,7 @@
         </div>
       </div>
     </section>
+  </div>
     <!-- FOOTER START -->
         <footer class="footer">
           <div class="footer__container container">
@@ -222,7 +222,7 @@
           </div>
         </div>
     <!-- Поп-ап окна обратной заявки-->
-        <div class="popup" id="modal_ob">
+        <div class="popup" id="popup__ob">
           <div class="popup__overlay">
             <div class="popup__body body-modal_ob">
               <div class="popup__list modal_ob_list">

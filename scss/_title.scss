@@ -1,0 +1,35 @@
+h2{
+  position: relative;
+  @include fontStyle(1.5rem, $blackColor);
+  font-weight: bold;
+  text-transform: uppercase;
+  &::before{
+    position: absolute;
+    content: "";
+    bottom: -25px;
+    height: 3px;
+    width: 4rem;
+    background-color: $redColor;
+    }
+  }
+
+.subtitle{
+  margin: 5rem 0;
+  &-link{
+    position: absolute;
+    transform: translateY(-85px);
+    width: 450px;
+  }&-list{
+    @include flexStyle(baseline, center, row);
+  }
+}
+
+
+@media screen and (max-width:$tablet){
+  .title{
+    margin-bottom: 3rem;
+  }
+  .subtitle-list{
+    flex-flow: column;
+  }
+}

@@ -6,7 +6,9 @@
   height: 50vh;
   background: url(../images/main/main.png) no-repeat center center;
   background-size: cover;
-  &__container{
+  &__content{
+    padding: 4rem 0;
+  }&__container{
     height: 100%;
   }&__title > h1{
     color: $whiteColor;
@@ -14,6 +16,7 @@
     line-height: 2.5rem;
   }
 }
+
 .main__container::before{
   content: "";
   position: absolute;

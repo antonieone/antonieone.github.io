@@ -9,26 +9,26 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <div class="content">
+
+        <header class="header">
 <!-- NAVIGATION START -->
         <nav class="nav nav__container">
-          <div class="nav__logo">
-            <img src="images/nav/logo.png" alt="Logo-Домашний переезд">
-            <a href="index.html" class="logo">
+          <a href="index.html" class="logo">
+            <img src="images/nav/logo.svg" alt="Logo-Домашний переезд">
               Домашний <br> переезд
-            </a>
-          </div>
+          </a>
           <div class="nav__main">
             <div class="nav__title">
               <ul class="nav__title-list">
                 <li class="nav__title-item phone">
-                  <a href="#" class="">8(950)-566-46-66</a>
+                  <a href="tel:+7 (950) 566 46 66" class="">8(950)-566-46-66</a>
                 </li>
                 <li class="nav__title-item email">
-                  <a href="#">gruz11reg@yandex.ru</a>
+                  <a href="mailto:gruz11reg@yandex.ru">gruz11reg@yandex.ru</a>
                 </li>
                 <li class="nav__button">
-                  <a href="#modal_ob"  name="nav__button" class="button button_nav">
+                  <a href="#popup"  name="nav__button" class="button button_nav popup-link">
                     Обратная связь
                   </a>
                 </li>
@@ -129,45 +129,38 @@
       <div class="services__container container">
         <div class="main__content">
           <div class="services__top">
-            <div class="services__title title">
+            <div class="services__title">
               <h2>Наши услуги</h2>
             </div>
             <div class="services__subtitle">
-              <ul class="services__list">
-                <li class="services__item-img sub-img">
-                  <img src="images/banner.png" alt="russian_map" title="russian_map">
-                </li>
-                <li class="services__link-item subtitle-link active--link">
-                  <a href="#" class="services__link">Грузоперевозки по России</a>
-                </li>
-              </ul>
+              <div class="services__item">
+               <a href="#" class="services__item-img sub-img">
+                 <img src="images/banner.png" alt="russian_map" title="russian_map">
+                 <p class="services__item-text ">Грузоперевозки по России</p>
+               </a>
+             </div>
             </div>
           </div>
           <div class="services__bottom">
-            <ul class="services__list">
-              <li class="services__item-img">
-                <img src="images/img1.jpg" alt="Квартирный переезд">
-              </li>
-              <li class="services__link-item">
-                <a href="#" class="services__link">Квартирный переезд</a>
-              </li>
-            </ul>
-            <ul class="services__list">
-              <li class="services__item-img">
-                <img src="images/img2.jpg"  alt="Офисный переезд">
-              </li>
-              <li class="services__link-item">
-                <a href="#" class="services__link">Офисный переезд</a>
-              </li>
-            </ul>
-            <ul class="services__list">
-              <li class="services__item-img">
-                <img src="images/img3.jpg"  alt="Дачный переезд">
-              </li>
-              <li class="services__link-item">
-                <a href="#" class="services__link">Дачный переезд</a>
-              </li>
-            </ul>
+            <div class="services__item">
+              <a href="#" class="services__item-img">
+                <img src="images/apart__delivery.jpg" alt="Квартирный переезд">
+                <p class="services__item-text">Квартирный переезд</p>
+              </a>
+            </div>
+            <div class="services__item">
+              <a href="#" class="services__item-img">
+                <img src="images/office__delivery.jpg"  alt="Офисный переезд">
+                <p class="services__item-text">Офисный переезд</p>
+              </a>
+            </div>
+            <div class="services__item">
+              <a class="services__item-img">
+                <img src="images/house__delivery.jpg"  alt="Дачный переезд">
+                <p class="services__item-text">Дачный переезд</p>
+              </a>
+            </div>
+
           </div>
           <div class="services__description">
             <p class="services__text">Современный домашний переезд - это когда Вы, не выходя из домашний,
@@ -188,36 +181,32 @@
     <section class="advanteges">
       <div class="advanteges__container container">
         <div class="main__content">
-          <div class="advanteges__title title">
             <h2>Наши пруимущества</h2>
-          </div>
           <div class="advanteges__subtitle subtitle subtitle-list">
             <ul class="advanteges__list list-icon">
               <li class="advanteges__item item">
-                <img class="icon" src="images/icons_advanteges/time.png" alt="">
+                <img class="icon" src="images/icons_advanteges/clock.svg" alt="">
                 <div class="advanteges__description description">
                   <h3>Соблюдаем сроки</h3>
                   <p>Своевремено подаем <br>авто и доставляем грузы</p>
                 </div>
               </li>
               <li class="advanteges__item item">
-                <img class="icon" src="images/icons_advanteges/way.png" alt="">
+                <img class="icon" src="images/icons_advanteges/location.svg" alt="">
                 <div class="advanteges__description description">
                   <h3>Ездим по всей РФ</h3>
                   <p>Всегда есть <br>свободный транспорт</p>
                 </div>
               </li>
-            </ul>
-            <ul class="advanteges__list list-icon">
               <li class="advanteges__item item">
-                <img class="icon" src="images/icons_advanteges/safety.png" alt="">
+                <img class="icon" src="images/icons_advanteges/shield.svg" alt="">
                 <div class="advanteges__description description">
                   <h3>Безопасноть</h3>
                   <p>Предлагаем только проверненных <br> водителей, с хорошей <br> репутацией</p>
                 </div>
               </li>
               <li class="advanteges__item item">
-                <img class="icon" src="images/icons_advanteges/list.png" alt="">
+                <img class="icon" src="images/icons_advanteges/doc.svg" alt="">
                 <div class="advanteges__description description">
                   <h3>Бухгалтерская отчетность</h3>
                   <p>Работаем за наличный <br> и безналичный расчет, НДС <br>
@@ -234,15 +223,11 @@
     <section class="transportation">
       <div class="transportation__container container">
         <div class="main__content">
-          <div class="transportation__title title">
             <h2>Как организуем перевозку</h2>
-          </div>
           <div class="transportation__subtitle subtitle subtitle-list">
-            <!-- блок иконок начало-->
             <ul class="transportation__list list-icon">
-              <!-- иконка с описанием  начало -->
               <li class="transportation__item item">
-                <img class="icon" src="images/icons_transport/checklist.png" alt="Оставляйте заявку">
+                <img class="icon" src="images/icons_transport/request.svg" alt="Оставляйте заявку">
                 <div class="transportation__description description">
                   <h3>
                     Оставляйте
@@ -251,20 +236,15 @@
                   <p>Даете параметры груза</p>
                 </div>
               </li>
-              <!-- иконка с описанием  конец -->
               <li class="transportation__item item">
-                <img class="icon" src="images/icons_transport/document.png" alt="Заключаем договор">
+                <img class="icon" src="images/icons_transport/dogovor.svg" alt="Заключаем договор">
                 <div class="transportation__description description">
                   <h3>Заключаем договор</h3>
                   <p>Согласовываем цену</p>
                 </div>
               </li>
-            </ul>
-            <!-- блок иконок конец-->
-            <!-- блок иконок начало-->
-            <ul class="transportation__list list-icon">
               <li class="transportation__item item">
-                <img class="icon" src="images/icons_transport/truck.png" alt="Осуществляем перевозку">
+                <img class="icon" src="images/icons_transport/truck.svg" alt="Осуществляем перевозку">
                 <div class="transportation__description description">
                   <h3>Осуществляем перевозку</h3>
                   <p>Подаем транспорт в назначенное <br> время, загружаемся,
@@ -272,14 +252,13 @@
                 </div>
               </li>
               <li class="transportation__item item">
-                <img src="images/icons_transport/dev_box.png" alt="Прием и разгрузка">
+                <img src="images/icons_transport/box.svg" alt="Прием и разгрузка">
                 <div class="transportation__description description">
                   <h3>Прием и разгрузка</h3>
                   <p>Окончательный расчет</p>
                 </div>
               </li>
             </ul>
-            <!-- блок иконок конец-->
           </div>
         </div>
       </div>
@@ -289,9 +268,7 @@
     <section class="trucks">
       <div class="trucks__container container">
         <div class="main__content">
-          <div class="trucks__title title">
             <h2>Наш Автопарк</h2>
-          </div>
           <div class="trucks__category subtitle">
             <div class="trucks__description">
               <div class="trucks__list">
@@ -347,6 +324,8 @@
         </div>
       </div>
     </section>
+
+  </div>
 <!-- TRUCKS END -->
 <!-- FOOTER START -->
     <footer class="footer">
@@ -363,7 +342,8 @@
             </ul>
             <ul class="footer__list">
               <li class="footer__item">
-                Тел: 8 (950) 566-46-66, 8 (963) 557-35-77
+                <a href="tel:+7 950 566 46 66">8(950)-566-46-66</a>
+                <a href="tel:+7 963 557 35 77">8(963)-557-35-77</a>
               </li>
               <li class="footer__item">
                 Email: gruz11reg@yandex.ru
@@ -371,7 +351,7 @@
             </ul>
             <ul class="footer__list">
               <li class="footer__button">
-                <a href="#modal_ob"  name="nav__button" class="button footer__button">
+                <a href="#popup"  name="footeк__button" class="button footer__button popup-link">
                   Обратная связь
                 </a>
               </li>
@@ -392,7 +372,8 @@
     </footer>
 <!-- FOOTER END -->
   </div>
-  <div class="popup" id="modal_ob">
+
+  <div class="popup" id="popup">
     <div class="popup__overlay">
       <div class="popup__body body-modal_ob">
         <div class="popup__list">
@@ -408,16 +389,16 @@
         <div class="popup__fields">
           <form class="popup__container" action="index.html" method="post">
             <label for="popup__name">Ваше имя</label>
-            <input id="popup__name" type="text" name="name">
+            <input id="popup__name" type="text" name="name" >
             <label for="popup__phone">Телефон</label>
-            <input id="popup__phone" type="phone" name="phone">
+            <input id="popup__phone" type="phone" name="phone" >
           </form>
           <div class="custom__checkbox" >
-            <input id="custom__checkbox" type="checkbox" name="checkbox" value="checkbox">
+            <input id="custom__checkbox" type="checkbox" name="checkbox" >
             <label for="custom__checkbox">Согласен на обработку <br> персональных данных </label>
           </div>
         </div>
-        <a href="#modal_ob" name="nav__button" class="button button__popup-z">
+        <a  name="nav__button" class="button button__popup-z">
           Обратная связь
         </a>
       </div>

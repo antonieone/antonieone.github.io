@@ -9,30 +9,29 @@
   </head>
   <body>
     <div class="wrapper">
-    <header class="header">
+      <div class="content">
+        <header class="header">
 <!-- NAVIGATION START -->
-      <nav class="nav nav__container">
-        <div class="nav__logo">
-          <img src="images/nav/logo.png" alt="">
+        <nav class="nav nav__container">
           <a href="index.html" class="logo">
-            Домашний <br> переезд
+            <img src="images/nav/logo.svg" alt="Logo-Домашний переезд">
+              Домашний <br> переезд
           </a>
-        </div>
-        <div class="nav__main">
-          <div class="nav__title">
-            <ul class="nav__title-list">
-              <li class="nav__title-item phone">
-                <a href="#" class="">8(950)-566-46-66</a>
-              </li>
-              <li class="nav__title-item email">
-                <a href="#">gruz11reg@yandex.ru</a>
-              </li>
-              <li class="nav__button">
-                <a href="#modal_ob"  name="nav__button" class="button button_nav">
-                  Обратная связь
-                </a>
-              </li>
-            </ul>
+          <div class="nav__main">
+            <div class="nav__title">
+              <ul class="nav__title-list">
+                <li class="nav__title-item phone">
+                  <a href="tel:+7 (950) 566 46 66" class="">8(950)-566-46-66</a>
+                </li>
+                <li class="nav__title-item email">
+                  <a href="mailto:gruz11reg@yandex.ru">gruz11reg@yandex.ru</a>
+                </li>
+                <li class="nav__button">
+                  <a href="#popup"  name="nav__button" class="button button_nav popup-link">
+                    Обратная связь
+                  </a>
+                </li>
+              </ul>
           </div>
           <div class="nav__subtitle">
             <ul class="nav__list">
@@ -114,7 +113,7 @@
         <div class="breadcrumb">
           <ul class="breadcrumb__list">
             <li class="breadcrumb__item">
-              <a href="#">Главная</a>
+              <a href="index.html">Главная</a>
             </li>
             <li class="breadcrumb__item">
               Калькулятор
@@ -147,12 +146,13 @@
             <p>Примерная стоимость:</p>
             <p>19 500 руб.</p>
           </div>
-          <a href="#modal"  name="nav__button" class="button contact__button">
+          <a href="#popup__ob"  name="nav__button" class="button contact__button popupOb">
             Оставить заявку
           </a>
         </div>
       </div>
     </section>
+  </div>
 <!-- FOOTER START -->
         <footer class="footer">
           <div class="footer__container container">
@@ -200,41 +200,42 @@
     </div>
 <!-- POPUP START -->
 <!-- Поп-ап окна заявки-->
-    <div class="popup" id="modal">
-      <div class="popup__overlay">
-        <div class="popup__body">
-          <div class="popup__list">
-            <ul>
-              <li>Оставить заявку</li>
-              <li>Закрыть
-                <a href="#" class="popup__close button__close">
-                  <i class="fas fa-times"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="popup__fields">
-            <form class="popup__container" action="index.html" method="post">
-              <label for="popup__name">Имя</label>
-              <input id="popup__name" type="text" name="name" >
-              <label for="popup__phone">Телефон</label>
-              <input id="popup__phone" type="phone" name="phone" >
-              <label for="popup__text">Краткая информация</label>
-              <textarea name="name" rows="8" cols="80"></textarea>
-            </form>
-            <div class="custom__checkbox" >
-              <input id="custom__checkbox" type="checkbox" name="checkbox" >
-              <label for="custom__checkbox">Согласен на обработку <br> персональных данных </label>
-            </div>
-          </div>
-          <a  name="nav__button" class="button button__popup-z">
-            Обратная связь
-          </a>
+<div class="popup" id="popup__ob">
+  <div class="popup__overlay">
+    <div class="popup__body">
+      <div class="popup__list">
+        <ul>
+          <li>Оставить заявку</li>
+          <li>
+            Закрыть
+            <a href="#" class="popup__close button__close">
+              <i class="fas fa-times"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="popup__fields">
+        <form class="popup__container" action="index.html" method="post">
+          <label for="popup__name">Имя</label>
+          <input id="popup__name" type="text" name="name" >
+          <label for="popup__phone">Телефон</label>
+          <input id="popup__phone" type="phone" name="phone" >
+          <label for="popup__text">Краткая информация</label>
+          <textarea name="name" rows="8" cols="80"></textarea>
+        </form>
+        <div class="custom__checkbox" >
+          <input id="custom__checkbox" type="checkbox" name="checkbox" >
+          <label for="custom__checkbox">Согласен на обработку <br> персональных данных </label>
         </div>
       </div>
+      <a  name="nav__button" class="button button__popup-z">
+        Обратная связь
+      </a>
     </div>
+  </div>
+</div>
 <!-- Поп-ап окна обратной заявки-->
-    <div class="popup" id="modal_ob">
+    <div class="popup" id="popup">
       <div class="popup__overlay">
         <div class="popup__body body-modal_ob">
           <div class="popup__list">

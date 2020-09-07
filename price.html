@@ -9,26 +9,25 @@
   </head>
   <body>
     <div class="wrapper">
-    <header class="header">
+      <div class="content">
+        <header class="header">
 <!-- NAVIGATION START -->
       <nav class="nav nav__container">
-        <div class="nav__logo">
-          <img src="images/nav/logo.png" alt="">
-          <a href="index.html" class="logo">
+        <a href="index.html" class="logo">
+          <img src="images/nav/logo.svg" alt="Logo-Домашний переезд">
             Домашний <br> переезд
-          </a>
-        </div>
+        </a>
         <div class="nav__main">
           <div class="nav__title">
             <ul class="nav__title-list">
               <li class="nav__title-item phone">
-                <a href="#" class="">8(950)-566-46-66</a>
+                <a href="tel:+7 (950) 566 46 66" class="">8(950)-566-46-66</a>
               </li>
               <li class="nav__title-item email">
-                <a href="#">gruz11reg@yandex.ru</a>
+                <a href="mailto:gruz11reg@yandex.ru">gruz11reg@yandex.ru</a>
               </li>
               <li class="nav__button">
-                <a href="#modal_ob" name="nav__button" class="button button_nav">
+                <a href="#popup__ob" name="nav__button" class="button button_nav popup-link">
                   Обратная связь
                 </a>
               </li>
@@ -122,7 +121,7 @@
         <div class="breadcrumb">
           <ul class="breadcrumb__list">
             <li class="breadcrumb__item">
-              <a href="#">Главная</a>
+              <a href="index.html">Главная</a>
             </li>
             <li class="breadcrumb__item">
               Прайс
@@ -130,86 +129,259 @@
           </ul>
         </div>
         <div class="main__content">
-          <div class="price__title title">
-            <h2>Прайс</h2>
-          </div>
+          <h2>Прайс</h2>
           <div class="price__subtitle subtitle">
-            <div class="price__link">
-              <ul class="price__weigh">
-                <li class="price__item">
-                  <a href="#">1.5 тонны</a>
+            <div class="price__link ">
+
+              <ul class="price__weigh tabs">
+                <li class="price__item tabs__items">
+                  <a href="#tab_01" class="tabs__item">1.5 тонны</a>
                 </li>
                 <li class="price__item">
-                  <a href="#">3 тонны</a>
+                  <a href="#tab_02" class="tabs__item">3 тонны</a>
                 </li>
                 <li class="price__item">
-                  <a href="#">5 тонн</a>
+                  <a href="#tab_03" class="tabs__item">5 тонн</a>
                 </li>
                 <li class="price__item">
-                  <a href="#">10 тонн</a>
+                  <a href="#tab_04" class="tabs__item">10 тонн</a>
                 </li>
                 <li class="price__item">
-                  <a href="#">20 тонн</a>
+                  <a href="#tab_05" class="tabs__item">20 тонн</a>
                 </li>
               </ul>
+
             </div>
           </div>
-          <div class="trucks-price">
-            <div class="trucks-price__picture">
-              <div class="trucks-price__image">
-                <img src="images/price/truck_1_5.png" alt="1.5т Truck">
+
+          <div class="tabs__body">
+            <div class="trucks-price" id="tab_01">
+              <div class="trucks-price__picture">
+                <div class="trucks-price__image">
+                  <img src="images/price/truck_1_5.png" alt="1.5т Truck">
+                </div>
+                <div class="trucks-price__image">
+                  <img src="images/price/truck_back_view.png" alt="Truck Back_Side">
+                </div>
               </div>
-              <div class="trucks-price__image">
-                <img src="images/price/truck_back_view.png" alt="Truck Back_Side">
+              <div class="trucks-price__description">
+                <div class="trucks-price__description-model">
+                  <div class="trucks-price__model">
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Марки автомобилей</h3>
+                      </li>
+                      <li class="description-truck__item">-ГАЗель</li>
+                      <li class="description-truck__item">-Isuzu</li>
+                      <li class="description-truck__item">-Kia</li>
+                      <li class="description-truck__item">-Mitsubishi</li>
+                    </ul>
+                  </div>
+                  <div class="trucks-price__model">
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Длина кузова</h3>
+                      </li>
+                      <li class="description-truck__item">от 4,5 м до 6,5 м.</li>
+                    </ul>
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Объем кузова</h3>
+                      </li>
+                      <li class="description-truck__item">
+                        от 18 до 30 куб. м.
+                      </li>
+                    </ul>
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Грузоподъемность</h3>
+                      </li class="description-truck__item">
+                      <li>от 3 до 4 т.</li>
+                    </ul>
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Цена за км</h3>
+                      </li class="description-truck__item">
+                      <li>17 руб./км</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="trucks-price__description">
-              <div class="trucks-price__description-model">
-                <div class="trucks-price__model">
-                  <ul class="description-truck__list">
-                    <li class="description-truck__item">
-                      <h3>Марки автомобилей</h3>
-                    </li>
-                    <li class="description-truck__item">-ГАЗель</li>
-                    <li class="description-truck__item">-Isuzu</li>
-                    <li class="description-truck__item">-Kia</li>
-                    <li class="description-truck__item">-Mitsubishi</li>
-                  </ul>
+            <div class="trucks-price" id="tab_02">
+              <div class="trucks-price__picture">
+                <div class="trucks-price__image">
+                  <img src="images/price/truck_3-5.png" alt="3.5т Truck">
                 </div>
-                <div class="trucks-price__model">
-                  <ul class="description-truck__list">
-                    <li class="description-truck__item">
-                      <h3>Длина кузова</h3>
-                    </li>
-                    <li class="description-truck__item">от 4,5 м до 6,5 м.</li>
-                  </ul>
-                  <ul class="description-truck__list">
-                    <li class="description-truck__item">
-                      <h3>Объем кузова</h3>
-                    </li>
-                    <li class="description-truck__item">
-                      от 18 до 30 куб. м.
-                    </li>
-                  </ul>
-                  <ul class="description-truck__list">
-                    <li class="description-truck__item">
-                      <h3>Грузоподъемность</h3>
-                    </li class="description-truck__item">
-                    <li>от 3 до 4 т.</li>
-                  </ul>
-                  <ul class="description-truck__list">
-                    <li class="description-truck__item">
-                      <h3>Цена за км</h3>
-                    </li class="description-truck__item">
-                    <li>17 руб./км</li>
-                  </ul>
+                <div class="trucks-price__image">
+                  <img src="images/price/truck_back_view.png" alt="Truck Back_Side">
                 </div>
+              </div>
+              <div class="trucks-price__description">
+                <div class="trucks-price__description-model">
+                  <div class="trucks-price__model">
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Марки автомобилей</h3>
+                      </li>
+                      <li class="description-truck__item">-ГАЗ "Бычок"</li>
+                      <li class="description-truck__item">-Валдай</li>
+                      <li class="description-truck__item">-Isuzu</li>
+                      <li class="description-truck__item">-Hino</li>
+                      <li class="description-truck__item">-Mazda</li>
+                    </ul>
+                  </div>
+                  <div class="trucks-price__model">
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Длина кузова</h3>
+                      </li>
+                      <li class="description-truck__item">от 4,5 м до 6,5 м.</li>
+                    </ul>
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Объем кузова</h3>
+                      </li>
+                      <li class="description-truck__item">
+                        от 18 до 30 куб. м.
+                      </li>
+                    </ul>
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Грузоподъемность</h3>
+                      </li class="description-truck__item">
+                      <li>от 3 до 4 т.</li>
+                    </ul>
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Цена за км</h3>
+                      </li class="description-truck__item">
+                      <li>17 руб./км</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="trucks-price" id="tab_04">
+              <div class="trucks-price__picture">
+                <div class="trucks-price__image">
+                  <img src="images/price/truck_10.png" alt="10т Truck">
+                </div>
+                <div class="trucks-price__image">
+                  <img src="images/price/truck_back_view.png" alt="Truck Back_Side">
+                </div>
+              </div>
+              <div class="trucks-price__description">
+                <div class="trucks-price__description-model">
+                  <div class="trucks-price__model">
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Марки автомобилей</h3>
+                      </li>
+                      <li class="description-truck__item">-Hino</li>
+                      <li class="description-truck__item">-Volvo</li>
+                      <li class="description-truck__item">-КамАЗ</li>
+                      <li class="description-truck__item">-Isuzu</li>
+                    </ul>
+                  </div>
+                  <div class="trucks-price__model">
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Длина кузова</h3>
+                      </li>
+                      <li class="description-truck__item">от 4,5 м до 6,5 м.</li>
+                    </ul>
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Объем кузова</h3>
+                      </li>
+                      <li class="description-truck__item">
+                        от 18 до 30 куб. м.
+                      </li>
+                    </ul>
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Грузоподъемность</h3>
+                      </li class="description-truck__item">
+                      <li>от 3 до 4 т.</li>
+                    </ul>
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Цена за км</h3>
+                      </li class="description-truck__item">
+                      <li>17 руб./км</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="trucks-price" id="tab_05">
+              <div class="trucks-price__picture">
+                <div class="trucks-price__image">
+                  <img src="images/price/truck_20.png" alt="20т Truck">
+                </div>
+                <div class="trucks-price__image">
+                  <img src="images/price/truck_back_view.png" alt="Truck Back_Side">
+                </div>
+              </div>
+              <div class="trucks-price__description">
+                <div class="trucks-price__description-model">
+                  <div class="trucks-price__model">
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Марки автомобилей</h3>
+                      </li>
+                      <li class="description-truck__item">-Hino</li>
+                      <li class="description-truck__item">-Volvo</li>
+                      <li class="description-truck__item">-КамАЗ</li>
+                      <li class="description-truck__item">-Isuzu</li>
+                    </ul>
+                  </div>
+                  <div class="trucks-price__model">
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Длина кузова</h3>
+                      </li>
+                      <li class="description-truck__item">от 4,5 м до 6,5 м.</li>
+                    </ul>
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Объем кузова</h3>
+                      </li>
+                      <li class="description-truck__item">
+                        от 18 до 30 куб. м.
+                      </li>
+                    </ul>
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Грузоподъемность</h3>
+                      </li class="description-truck__item">
+                      <li>от 3 до 4 т.</li>
+                    </ul>
+                    <ul class="description-truck__list">
+                      <li class="description-truck__item">
+                        <h3>Цена за км</h3>
+                      </li class="description-truck__item">
+                      <li>17 руб./км</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button__price">
+              <div class="button__price-left">
+              </div>
+              <div class="button__price-right">
+                <a href="#popup__ob"  name="button__ost_za" class="button contact__button popupOb">
+                  Оставить заявку
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+  </div>
     <!-- PRICE START -->
     <!-- FOOTER START -->
         <footer class="footer">
@@ -257,13 +429,14 @@
     <!-- FOOTER END -->
     <!-- POPUP START -->
     <!-- Поп-ап окна заявки-->
-        <div class="popup" id="modal">
+        <div class="popup" id="popup__ob">
           <div class="popup__overlay">
             <div class="popup__body">
               <div class="popup__list">
                 <ul>
                   <li>Оставить заявку</li>
-                  <li>Закрыть
+                  <li>
+                    Закрыть
                     <a href="#" class="popup__close button__close">
                       <i class="fas fa-times"></i>
                     </a>
@@ -271,12 +444,12 @@
                 </ul>
               </div>
               <div class="popup__fields">
-                <form class="popup-z__container" action="index.html" method="post">
-                  <label for="popup-z__name">Имя</label>
-                  <input id="popup-z__name" type="text" name="name" >
-                  <label for="popup-z__phone">Телефон</label>
-                  <input id="popup-z__phone" type="phone" name="phone" >
-                  <label for="popup-z__text">Краткая информация</label>
+                <form class="popup__container" action="index.html" method="post">
+                  <label for="popup__name">Имя</label>
+                  <input id="popup__name" type="text" name="name" >
+                  <label for="popup__phone">Телефон</label>
+                  <input id="popup__phone" type="phone" name="phone" >
+                  <label for="popup__text">Краткая информация</label>
                   <textarea name="name" rows="8" cols="80"></textarea>
                 </form>
                 <div class="custom__checkbox" >
@@ -291,7 +464,7 @@
           </div>
         </div>
     <!-- Поп-ап окна обратной заявки-->
-        <div class="popup" id="modal_ob">
+        <div class="popup" id="popup">
           <div class="popup__overlay">
             <div class="popup__body body-modal_ob">
               <div class="popup__list">
@@ -328,7 +501,6 @@
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/script.js"></script>
-        <script type="text/javascript" src="js/map.js"></script>
   </div>
   </body>
 </html>

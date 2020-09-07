@@ -10,26 +10,27 @@
   </head>
   <body>
     <div class="wrapper">
-    <header class="header">
+      <div class="content">
+        <header class="header">
     <!-- NAVIGATION START -->
-      <nav class="nav container">
+    <nav class="nav container">
         <div class="nav__logo">
-          <img src="images/nav/logo.png" alt="">
           <a href="index.html" class="logo">
-            Домашний <br> переезд
+            <img src="images/nav/logo.svg" alt="Logo-Домашний переезд">
+              Домашний <br> переезд
           </a>
         </div>
         <div class="nav__main">
           <div class="nav__title">
             <ul class="nav__title-list">
               <li class="nav__title-item phone">
-                <a href="#" class="">8(950)-566-46-66</a>
+                <a href="tel:+7 (950) 566 46 66" class="">8(950)-566-46-66</a>
               </li>
               <li class="nav__title-item email">
-                <a href="#">gruz11reg@yandex.ru</a>
+                <a href="mailto:gruz11reg@yandex.ru">gruz11reg@yandex.ru</a>
               </li>
               <li class="nav__button">
-                <a href="#modal_ob" name="nav__button" class="button button_nav">
+                <a href="#popup" name="nav__button" class="button button_nav popup-link">
                   Обратная связь
                 </a>
               </li>
@@ -109,21 +110,19 @@
         </div>
       </nav>
     <!-- NAVIGATION END --></header>
-    <section class="contact">
-      <div class="container-list">
-        <ul class="price__list">
-          <li class="list-item-1">
-            <a href="#">Главная</a>
+    <section class="contact container">
+      <div class="breadcrumb">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <a href="index.html">Главная</a>
           </li>
-          <li class="list-item-2">
-            <a href="#">Контакты</a>
+          <li class="breadcrumb__item">
+            Контакты
           </li>
         </ul>
       </div>
       <div class="contact__container container">
-        <div class="contact__title title">
-          <h2>Контакты</h2>
-        </div>
+        <h2>Контакты</h2>
         <div class="contact__subtitle">
           <h3>Координаты нашего офиса</h3>
           <p>167000, г.Сыктывкар, ул. Огородная, д.6, оф. 2</p>
@@ -135,11 +134,12 @@
         <div class="contact__map">
           <div id="map"></div>
         </div>
-        <a href="#modal" name="nav__button" class="button contact__button">
+        <a href="#popup__ob" name="nav__button" class="button contact__button popupOb">
           Оставить заявку
         </a>
       </div>
     </section>
+  </div>
     <!-- FOOTER START -->
         <footer class="footer">
           <div class="footer__container container">
@@ -186,7 +186,7 @@
 <!-- FOOTER END -->
 <!-- POPUP START -->
 <!-- Поп-ап окна заявки-->
-    <div class="popup" id="modal">
+    <div class="popup" id="popup__ob">
       <div class="popup__overlay">
         <div class="popup__body">
           <div class="popup__list">
@@ -220,7 +220,7 @@
       </div>
     </div>
 <!-- Поп-ап окна обратной заявки-->
-    <div class="popup" id="modal_ob">
+    <div class="popup" id="popup">
       <div class="popup__overlay">
         <div class="popup__body body-modal_ob">
           <div class="popup__list">
