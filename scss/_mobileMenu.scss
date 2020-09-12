@@ -17,12 +17,16 @@
   transform: translateX(100%);
   transition: .5s;
 }&__mobile-item{
+  position: relative;
   padding: 1.5rem;
   & > a{
-    @include fontStyle(2rem, $blackColor);
+    @include fontStyle(1.7rem, $blackColor);
   }& > a:hover{
     color: $blackColor;
   }
+}&__mobile-item:first-child{
+  position: absolute;
+  top: 0;
 }
 }
 .menu_open .nav__mobile-links{

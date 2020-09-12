@@ -3,8 +3,6 @@ let hamburgerMenu = document.querySelector('.nav__mobile')
 let body = document.querySelector('body');
 
 
-
-
 hamburgerMenu.addEventListener('click', function(){
   nav.classList.toggle('menu_open')
   body.classList.toggle('body_scroll')
@@ -16,9 +14,8 @@ hamburgerMenu.addEventListener('click', function(){
 // ОБРАТНАЯ СВЯЗЬ НАЧАЛО
 
 let popup = document.querySelectorAll('.popup-link');
-let popupOb = document.querySelector('.popupOb');
 let popupContent = document.querySelector('.popup__body');
-let closePop = document.querySelector('.popup__close');
+let closePop = document.querySelectorAll('.button__close');
 
 if(popup.length > 0){
   for (let i = 0; i < popup.length; i++){
@@ -28,33 +25,24 @@ if(popup.length > 0){
       let curentPopup = document.getElementById(popupName);
 
 
-      closePop.addEventListener('click', function(){
-      		curentPopup.classList.remove('openPopup');
-          body.classList.toggle('body_scroll');
-      	});
+      if(closePop.length > 0){
+        for(let i = 0; i < closePop.length; i++){
+          let closeLink = closePop[i];
+          closeLink.addEventListener('click', function(e) {
+            curentPopup.classList.remove('openPopup');
+            body.classList.toggle('body_scroll');
+            e.preventDefault();
+          });
+        }
+      }
 
       popOpen(curentPopup);
-
+      
       e.preventDefault();
     });
   }
 }
 
-
-
-// popup.addEventListener('click', function(e) {
-// 	let popupName = popup.getAttribute('href').replace('#', '');
-// 	let curentPopup = document.getElementById('popup');
-//
-// 	popOpen(curentPopup);
-//
-// 	closePop.addEventListener('click', function(){
-// 		curentPopup.classList.remove('openPopup');
-//     body.classList.toggle('body_scroll');
-// 	});
-//
-// 	e.preventDefault();
-// });
 
 function popOpen(curentPopup){
 	curentPopup.classList.add('openPopup');
@@ -67,13 +55,16 @@ function popOpen(curentPopup){
 
 // ОСТАВИТЬ ЗАЯВКУ ПОПАП НАЧАЛО
 
+let popupOb = document.querySelector('.popupOb');
+let closePopOb = document.querySelector('.button__closeOb')
+
 popupOb.addEventListener('click', function(e) {
   let popupObName = popupOb.getAttribute('href').replace('#', '');
   let currentPopUpOb = document.getElementById('popup__ob');
 
   popOpen(currentPopUpOb);
 
-  closePop.addEventListener('click', function(){
+  closePopOb.addEventListener('click', function(){
 		currentPopUpOb.classList.remove('openPopup');
     body.classList.toggle('body_scroll');
 	});

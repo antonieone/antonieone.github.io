@@ -1,6 +1,7 @@
 .sub-nav__list{
   display: none;
   position: absolute;
+  z-index: 1;
   top: 60px;
   left: -25px;
   min-width: 300px;

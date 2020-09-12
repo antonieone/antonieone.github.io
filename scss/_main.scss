@@ -17,17 +17,6 @@
   }
 }
 
-.main__container::before{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  height: 0;
-  width: 100%;
-  border-bottom: 25px solid $whiteColor;
-  border-left: 24px solid transparent;
-  z-index: 1;
-  transform: translateX(46rem);
-}
 .main__title{
   @include flexStyle(flex-end, flex-end, row);
   height: 100%;
