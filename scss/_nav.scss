@@ -12,7 +12,6 @@
   @include flexStyle(baseline, center, row);
   &__main{
     flex: 0 0 70%;
-    z-index: 1;
     @include flexStyle(center, center, column);
     align-self: flex-start;
     background-color: $whiteColor;
@@ -27,7 +26,6 @@
   }&__subtitle:before{
     content: "";
     position: absolute;
-    z-index: -1;
     bottom: 0;
     height: 0;
     width: 100%;
@@ -52,15 +50,20 @@
   }
 }
 
+
+
 .logo:before{
   content: "";
   position: absolute;
+  display: inline-block;
   z-index: -1;
   top: 0;
   height: 0;
   width: 100%;
   border-top: 110px solid $lightGreyColor;
   border-right: 60px solid transparent;
+
+  // left: -60%;
   transform: translateX(3rem);
 }
 

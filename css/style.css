@@ -20,15 +20,14 @@ html {
   overflow: hidden; }
 
 .wrapper {
-  display: flex;
-  flex-direction: normal;
-  align-items: normal;
-  flex-direction: column;
   min-height: 100%;
   overflow: hidden; }
 
 .content {
-  flex: 1 0 auto; }
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  flex-direction: column; }
 
 .container {
   max-width: 1000px;
@@ -306,7 +305,7 @@ h2 {
   right: 0;
   width: 35%;
   height: 100vh;
-  z-index: -1;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -371,6 +370,7 @@ h2 {
       color: #000; }
 
   .nav__icons {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -395,7 +395,6 @@ h2 {
   flex-direction: row; }
   .nav__main {
     flex: 0 0 70%;
-    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -415,7 +414,6 @@ h2 {
   .nav__subtitle:before {
     content: "";
     position: absolute;
-    z-index: -1;
     bottom: 0;
     height: 0;
     width: 100%;
@@ -444,6 +442,7 @@ h2 {
 .logo:before {
   content: "";
   position: absolute;
+  display: inline-block;
   z-index: -1;
   top: 0;
   height: 0;
@@ -552,6 +551,9 @@ h2 {
 
 .sub__nav > a:before {
   content: "\f0dd";
+  width: 10px;
+  height: 10px;
+  fill: #FFF;
   position: absolute;
   right: -20px;
   color: #FFF;

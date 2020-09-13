@@ -23,6 +23,7 @@
     color: $whiteColor;
   }&:before{
     content: "\f054";
+
     position: absolute;
     left: 20px;
     color: $blackColor;
@@ -35,6 +36,9 @@
 }
 .sub__nav > a:before{
     content: "\f0dd";
+    width: 10px;
+    height: 10px;
+    fill:$whiteColor;
     position: absolute;
     right: -20px;
     color: $whiteColor;
