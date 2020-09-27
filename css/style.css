@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"); }
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +11,11 @@ footer {
 
 html,
 body {
-  height: 100%; }
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  flex-direction: column;
+  min-height: 100%; }
 
 html {
   line-height: 1.5rem;
@@ -22,12 +28,6 @@ html {
 .wrapper {
   min-height: 100%;
   overflow: hidden; }
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: normal;
-  flex-direction: column; }
 
 .container {
   max-width: 1000px;
@@ -265,7 +265,7 @@ h2 {
   position: relative;
   font-size: 1.5rem;
   color: #000;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "MyriadProRegular";
   font-weight: bold;
   text-transform: uppercase; }
   h2::before {
@@ -300,12 +300,12 @@ h2 {
   display: none;
   padding: 1rem; }
 .nav__mobile-links {
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   top: 0;
   right: 0;
   width: 35%;
   height: 100vh;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -320,7 +320,7 @@ h2 {
   .nav__mobile-item > a {
     font-size: 1.7rem;
     color: #000;
-    font-family: 'Ubuntu', sans-serif; }
+    font-family: "MyriadProRegular"; }
   .nav__mobile-item > a:hover {
     color: #000; }
 .nav__mobile-item:first-child {
@@ -328,8 +328,8 @@ h2 {
   top: 0; }
 
 .menu_open .nav__mobile-links {
-  opacity: 1;
-  transform: translateX(0); }
+  transform: translateX(0);
+  opacity: 1; }
 
 .menu_open .nav__icons .fa-times {
   display: block;
@@ -341,12 +341,12 @@ h2 {
 .fa-times {
   font-size: 1.5rem;
   color: #663333;
-  font-family: 'Ubuntu', sans-serif; }
+  font-family: "MyriadProRegular"; }
 
 .fa-bars {
   font-size: 1.5rem;
   color: #FFF;
-  font-family: 'Ubuntu', sans-serif; }
+  font-family: "MyriadProRegular"; }
 
 @media screen and (max-width: 768px) {
   .nav__mobile-links {
@@ -363,7 +363,7 @@ h2 {
     padding: 0 1rem;
     font-size: 1rem;
     color: #FFF;
-    font-family: 'Ubuntu', sans-serif; }
+    font-family: "MyriadProRegular"; }
     .nav__link:last-child {
       padding-right: 0rem; }
     .nav__link > a:hover {
@@ -371,11 +371,11 @@ h2 {
 
   .nav__icons {
     position: relative;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    z-index: 10;
     cursor: pointer; }
 
   .nav__icons .fa-times {
@@ -407,7 +407,7 @@ h2 {
   .nav__title-item > a {
     font-size: 1.1rem;
     color: #1c1c1c;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "MyriadProRegular";
     font-weight: bold; }
   .nav__subtitle {
     width: 100%; }
@@ -433,7 +433,7 @@ h2 {
   margin: 0 5rem 0 1rem;
   font-size: 2rem;
   color: #663333;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "MyriadProRegular";
   font-weight: 900; }
   .logo > img {
     height: 100px;
@@ -517,11 +517,11 @@ h2 {
   .logo {
     margin-right: 0; } }
 .sub-nav__list {
-  display: none;
   position: absolute;
-  z-index: 1;
   top: 60px;
   left: -25px;
+  display: none;
+  z-index: 1;
   min-width: 300px;
   background-color: rgba(255, 229, 180, 0.7); }
 
@@ -532,9 +532,9 @@ h2 {
   position: relative;
   z-index: 10;
   color: #000;
-  padding: .8rem 2.5rem;
+  padding: 0.8rem 2.5rem;
   width: 100%;
-  transition: .5s; }
+  transition: 0.5s; }
   .sub-nav__link > a:hover {
     background-color: #d12c2c;
     color: #FFF; }
@@ -545,7 +545,7 @@ h2 {
     color: #000;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    font-size: .7rem; }
+    font-size: 0.7rem; }
   .sub-nav__link > a:hover:before {
     color: #FFF; }
 
@@ -658,7 +658,7 @@ h2 {
   .services__text {
     font-size: 1rem;
     color: #1c1c1c;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "MyriadProRegular";
     text-align: justify; }
   .services__description {
     padding: 4rem 0; }
@@ -705,7 +705,7 @@ h2 {
     margin-bottom: 1rem;
     font-size: 1.3rem;
     color: #FFF;
-    font-family: 'Ubuntu', sans-serif; }
+    font-family: "MyriadProRegular"; }
   .description > p {
     text-align: center; }
 

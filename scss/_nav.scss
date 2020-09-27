@@ -1,27 +1,27 @@
-.header{
+.header {
   position: relative;
   flex: 1 0 auto;
 }
 
-.nav__container{
+.nav__container {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.nav{
+.nav {
   @include flexStyle(baseline, center, row);
-  &__main{
+  &__main {
     flex: 0 0 70%;
     @include flexStyle(center, center, column);
     align-self: flex-start;
     background-color: $whiteColor;
-  }&__title{
+  }&__title {
     width: 100%;
     margin: 2rem 0;
-  }&__title-item > a{
+  }&__title-item > a {
     @include fontStyle(1.1rem, $greyColor);
     font-weight: bold;
-  }&__subtitle{
+  }&__subtitle {
     width: 100%;
   }&__subtitle:before{
     content: "";
@@ -32,19 +32,18 @@
     border-bottom: 60px solid $wineColor;
     border-left: 30px solid transparent;
     transform: translateX(-4rem);
-  }&__link{
+  }&__link {
     position: relative;
     padding: 18px 0;
   }
 }
-
-.logo{
+.logo {
   flex: 0 0 30%;
   @include flexStyle(center, flex-end, row);
   margin:0 5rem 0 1rem;
   @include fontStyle(2rem, $wineColor);
   font-weight: 900;
-  & > img{
+  & > img {
     height: 100px;
     width: 100px;
   }
@@ -52,7 +51,7 @@
 
 
 
-.logo:before{
+.logo:before {
   content: "";
   position: absolute;
   display: inline-block;
@@ -67,7 +66,7 @@
   transform: translateX(3rem);
 }
 
-.button{
+.button {
   @include button;
   transition: .5s;
 }

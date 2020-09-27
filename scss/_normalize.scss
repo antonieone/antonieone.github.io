@@ -1,39 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-*{
+
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff");
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-footer{
+footer {
   flex: 0 0 auto;
 }
 html,
-body{
-  height: 100%
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 html {
   line-height: 1.5rem;
   -webkit-text-size-adjust: 100%; /* 2 */
 }
-.body_scroll{
+.body_scroll {
   overflow: hidden;
 }
-.wrapper{
+.wrapper {
   min-height: 100%;
   overflow: hidden;
 }
-.content{
-  display: flex;
-  flex-direction: column;
-  align-items: normal;
-  flex-direction: column;
-}
-.container{
+
+.container {
   max-width: 1000px;
   margin: 0 auto;
 }
-a{
+a {
   display: inline-block;
   text-decoration: none;
   color: #FFF;
