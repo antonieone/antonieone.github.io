@@ -8,11 +8,9 @@
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
- <div class="wrapper">
-      <div class="content">
-        <header class="header">
+  <header class="header">
 <!-- NAVIGATION START -->
-        <nav class="nav nav__container">
+      <nav class="nav nav__container">
           <a href="index.html" class="logo">
             <img src="svg/nav/logo.svg" alt="Logo-Домашний переезд">
               <p class="logo__text">Домашний <br> переезд</p>
@@ -120,6 +118,7 @@
 <!-- NAVIGATION END -->
     </header>
 <!-- MAIN START -->
+<main class="wrapper">
     <section class="main">
       <div class="main__container container">
         <div class="main__title">
@@ -138,7 +137,7 @@
             </div>
             <div class="services__subtitle">
               <div class="services__item">
-               <a href="#" class="services__item-img sub-img">
+               <a class="services__item-img sub-img" href="#">
                  <img src="images/banner.png" alt="russian_map" title="russian_map">
                  <p class="services__item-text ">Грузоперевозки по России</p>
                </a>
@@ -329,7 +328,7 @@
       </div>
     </section>
 
-  </div>
+  </main>
 <!-- TRUCKS END -->
 <!-- FOOTER START -->
     <footer class="footer">
@@ -380,18 +379,16 @@
   <div class="popup" id="popup">
     <div class="popup__overlay">
       <div class="popup__body body-modal_ob">
-        <div class="popup__list">
-          <ul>
-            <li>Форма обратной связи</li>
+          <ul class="popup__list">
+            <li>Оставить заявку</li>
             <li>Закрыть
               <a href="#" class="popup__close button__close">
                 <i class="fas fa-times"></i>
               </a>
-            </li>
           </ul>
-        </div>
         <div class="popup__fields">
           <form class="popup__container" action="index.html" method="post">
+
             <label for="popup__name">Ваше имя</label>
             <input id="popup__name" type="text" name="name" value="">
             <label for="popup__phone">Телефон</label>
@@ -402,9 +399,12 @@
             <label for="custom__checkbox">Согласен на обработку <br> персональных данных </label>
           </div>
         </div>
-        <a class="button button__popup-z">
+        <!-- <a class="button button__popup-z">
           Обратная связь
-        </a>
+        </a> -->
+        <div>
+          <button type="button" name="button" class="button button__popup-z">Обратная связь</button>
+        </div>
       </div>
     </div>
   </div>

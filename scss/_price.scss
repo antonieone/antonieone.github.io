@@ -1,17 +1,17 @@
-.price{
+.price {
   flex: 1 0 auto;
-  &__weigh{
+  &__weigh {
     position: relative;
     display: flex;
-  }&__link{
+  }&__link {
     overflow: hidden;
-  }&__item{
+  }&__item {
     position: relative;
     width: 125px;
     padding: .5rem 1rem;
     cursor: pointer;
     background-color: $wineColor;
-  }&__item > a{
+  }&__item > a {
     position: relative;
     color: $whiteColor;
     z-index: 2;
@@ -19,7 +19,7 @@
 }
 
 
-.price__item:last-child::before{
+.price__item:last-child::before {
   content: '';
   position: absolute;
   right: 0;
@@ -27,10 +27,10 @@
   border-bottom: 40px solid #FFF;
   border-left: 30px solid transparent;
 }
-.price__item:hover{
+.price__item:hover {
   background: red;
 }
-.price__item:not(:last-child):hover::before{
+.price__item:not(:last-child):hover::before {
   content: '';
   position: absolute;
   right: 0;
@@ -39,17 +39,17 @@
   border-left: 30px solid transparent;
 }
 
-.description-truck__list{
+.description-truck__list {
   flex: 1;
   margin-bottom:1rem;
-  & > li:nth-child(even){
+  & > li:nth-child(even) {
     padding: 1rem 0;
   }
 }
 
 //Button Price
 
-.button__price{
+.button__price {
   @include flexStyle(center, center, row);
   &-left{
     flex: 1;
@@ -59,19 +59,21 @@
 }
 
 @media screen and (max-width:$tablet) {
-  .price{
-    &__weigh{
+  .price {
+    &__weigh {
       flex-flow: column;
-    }&__item{
+    }&__item {
       margin: .5rem 0;
-    }&__weigh::after{
+    }&__weigh::after {
       transform: scale(0);
       width: 0;
     }
   }
-
+  .button__price {
+    display: block;
+  }
   // СПОСОБ 1
-  .price__item::before{
+  .price__item::before {
     content: '';
     position: absolute;
     right: 0;
@@ -79,10 +81,10 @@
     border-bottom: 40px solid #FFF;
     border-left: 30px solid transparent;
   }
-  .price__item:hover{
+  .price__item:hover {
     background: red;
   }
-  .price__item:not(:last-child):hover::before{
+  .price__item:not(:last-child):hover::before {
     content: '';
     position: absolute;
     right: 0;

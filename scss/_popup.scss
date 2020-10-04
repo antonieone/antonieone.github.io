@@ -8,35 +8,39 @@
   transition: .6s;
   visibility: hidden;
   opacity: 0;
-  &__overlay{
+  &__overlay {
   position: absolute;
   @include flexStyle(center, center, column);
   width: 100%;
   height: 100%;
   background-color: rgba(49, 41, 41, 0.88);
-  }&__body{
+  }&__body {
   position: relative;
   @include flexStyle(center, center, column);
   width: 400px;
   height: 600px;
   background-color: $whiteColor;
+  overflow: hidden;
   & > button{
     width: 35%;
     border: 1px solid $wineColor;
     color: $wineColor;
   }
-  }&__list{
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  color: $wineColor;
-  width: 100%;
-  overflow: hidden;
-  & > ul{
-    position: relative;
-    @include flexStyle(center, space-around, row);
-  }& > ul:before{
+  }&__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  & > li:first-child {
+    flex: 2;
+    color: $whiteColor;
+  }&> li:last-child {
+    flex: 1;
+  }& > li:first-child:before {
     content: '';
     position: absolute;
     top: 0;
@@ -46,23 +50,16 @@
     height: 100%;
     z-index: -1;
     width: 100%;
-  }& > ul > li:first-child{
-    color: $whiteColor;
-  }& > ul > li:last-child{
-    position: relative;
-    display: flex;
-    align-items: center;
-    left: 2rem;
   }
-  }
-  &__close{
+}
+  &__close {
   color: $wineColor;
   & > i{
     padding: 10px;
     color: $wineColor;
     cursor: pointer;
   }
-  }&__container{
+  }&__container {
   max-width: 250px;
   & > textarea{
     padding: .6rem;
@@ -70,7 +67,7 @@
     height: 120px;
     border: none;
     background-color: $lightGreyColor;
-  }& > input{
+  }& > input {
     border: none;
     background-color: $lightGreyColor;
     padding: .6rem;
@@ -92,8 +89,8 @@
   .popup__body{
     width: 300px;
   }
-  .popup__list > ul:before{
-    left: -105px;
+  .popup__list li:first-child:before{
+    left: -125px;
   }
   .popup__list > ul > li:last-child{
     left: 1.2rem;
