@@ -1,4 +1,4 @@
-.advanteges{
+.advanteges {
   flex: 1 0 auto;
   background-color: $wineColor;
   &__container{
@@ -7,11 +7,11 @@
     color: $whiteColor;
   }
 }
-.advanteges .main__content > h2{
+.advanteges .main__content > h2 {
   color: $whiteColor;
 }
 
-.description{
+.description {
   @include flexStyle(center, flex-start, column);
   margin-top: 1rem;
   & > h3{
@@ -22,25 +22,25 @@
   }
 }
 
-.advanteges__container::after{
+.advanteges__container::after {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   height: 0;
-  width: 100%;
+  width: 100vw;
   border-top: 30px solid $whiteColor;
   border-right: 20px solid transparent;
   z-index: 1;
-  transform: translateX(-48rem);
+  transform: translateX(-50rem);
 }
-.advanteges__container::before{
+.advanteges__container::before {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   height: 0;
-  width: 100%;
+  width: 100vw;
   border-bottom: 30px solid $lightGreyColor;
   border-left: 20px solid transparent;
   z-index: 1;

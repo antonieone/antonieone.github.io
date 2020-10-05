@@ -11,10 +11,12 @@
     <header class="header">
 <!-- NAVIGATION START -->
       <nav class="nav nav__container">
-        <a href="index.html" class="logo">
-          <img src="svg/nav/logo.svg" alt="Logo-Домашний переезд">
-            <p class="logo__text">Домашний <br> переезд</p>
-        </a>
+        <div class="logo">
+            <a href="index.html">
+              <img src="svg/nav/logo.svg" alt="Logo-Домашний переезд">
+            </a>
+            Домашний <br> переезд
+        </div>
         <div class="nav__main">
           <div class="nav__title">
             <ul class="nav__title-list">
@@ -241,38 +243,37 @@
       </div>
     </div>
 <!-- Поп-ап окна обратной заявки-->
-    <div class="popup" id="popup__ob">
-      <div class="popup__overlay">
-        <div class="popup__body body-modal_ob">
-          <div class="popup__list modal_ob_list">
-            <ul>
-              <li>Форма обратной связи</li>
-              <li>Закрыть</li>
-              <li>
-                <a href="#" class="popup__close button__close">
-                  <i class="fas fa-times"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="popup__fields">
-            <form class="popup__container" action="index.html" method="post">
-              <label for="popup__name">Ваше имя</label>
-              <input id="popup__name" type="text" name="name" >
-              <label for="popup__phone">Телефон</label>
-              <input id="popup__phone" type="phone" name="phone" >
-            </form>
-            <div class="custom__checkbox" >
-              <input id="custom__checkbox" type="checkbox" name="checkbox" >
-              <label for="custom__checkbox">Согласен на обработку <br> персональных данных </label>
-            </div>
-          </div>
-          <a  name="nav__button" class="button button__popup-z">
-            Обратная связь
-          </a>
+<div class="popup" id="popup">
+  <div class="popup__overlay">
+    <div class="popup__body body-modal_ob">
+        <ul class="popup__list">
+          <li>Оставить заявку</li>
+          <li>Закрыть
+            <button class="popup__close button__close" type="button"><i class="fas fa-times"></i><button>
+            <!-- <a href="#" class="popup__close button__close">
+              <i class="fas fa-times"></i>
+            </a> -->
+          </li>
+        </ul>
+      <div class="popup__fields">
+        <form class="popup__container" action="index.html" method="post">
+
+          <label for="popup__name">Ваше имя</label>
+          <input id="popup__name" type="text" name="name" value="">
+          <label for="popup__phone">Телефон</label>
+          <input id="popup__phone" name="phone" value="">
+        </form>
+        <div class="custom__checkbox" >
+          <input id="custom__checkbox" type="checkbox" name="checkbox" value="">
+          <label for="custom__checkbox">Согласен на обработку <br> персональных данных </label>
         </div>
       </div>
+      <div>
+        <button type="button" name="button" class="button button__popup-z">Обратная связь</button>
+      </div>
     </div>
+  </div>
+</div>
 <!-- POPUP END -->
     <script
 			  src="https://code.jquery.com/jquery-3.5.1.js"

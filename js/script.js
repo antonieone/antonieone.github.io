@@ -30,14 +30,14 @@ if(popup.length > 0){
           let closeLink = closePop[i];
           closeLink.addEventListener('click', function(e) {
             curentPopup.classList.remove('openPopup');
-            body.classList.toggle('body_scroll');
+            body.classList.remove('body_scroll');
             e.preventDefault();
           });
         }
       }
 
       popOpen(curentPopup);
-      
+
       e.preventDefault();
     });
   }
@@ -46,7 +46,7 @@ if(popup.length > 0){
 
 function popOpen(curentPopup){
 	curentPopup.classList.add('openPopup');
-  body.classList.toggle('body_scroll');
+  body.classList.add('body_scroll');
 };
 
 // ОБРАТНАЯ СВЯЗЬ КОНЕЦ
@@ -56,7 +56,7 @@ function popOpen(curentPopup){
 // ОСТАВИТЬ ЗАЯВКУ ПОПАП НАЧАЛО
 
 let popupOb = document.querySelector('.popupOb');
-let closePopOb = document.querySelector('.button__closeOb')
+let closePopOb = document.querySelector('.button__closeOb');
 
 popupOb.addEventListener('click', function(e) {
   let popupObName = popupOb.getAttribute('href').replace('#', '');
@@ -66,7 +66,7 @@ popupOb.addEventListener('click', function(e) {
 
   closePopOb.addEventListener('click', function(){
 		currentPopUpOb.classList.remove('openPopup');
-    body.classList.toggle('body_scroll');
+    body.classList.remove('body_scroll');
 	});
 
   e.preventDefault();
@@ -84,6 +84,8 @@ function popOpen(currentPopUpOb){
 
 // TAB
 
+
+
 document.querySelectorAll('.tabs__item').forEach((item) =>
   item.addEventListener('click', function(e) {
     e.preventDefault();
@@ -100,6 +102,9 @@ document.querySelectorAll('.tabs__item').forEach((item) =>
 );
 
 document.querySelector('.tabs__item').click();
+
+
+
 
 
 // $(document).ready(function(){
