@@ -84,7 +84,31 @@ function popOpen(currentPopUpOb){
 
 // TAB
 
-
+// let tabsItem = document.querySelectorAll('.tabs__item');
+//
+// if (tabsItem.length > 0){
+//   for (let i = 0; i < tabsItem.length; i++){
+//     let tabsItemI = tabsItem[i];
+//       tabsItemI.addEventListener('click', function(e) {
+//         let tabsItemName = tabsItemI.getAttribute('href').replace('#', '');
+//         let currentTab = document.getElementById(tabsItemName);
+//
+//
+//         e.preventDefault();
+//
+//         tabShow(currentTab);
+//
+//       });
+//
+//   };
+// };
+//
+// document.querySelector('.tabs__item').click();
+//
+//
+// function tabShow(currentTab){
+//   currentTab.classList.add('trucks-price__active');
+// };
 
 document.querySelectorAll('.tabs__item').forEach((item) =>
   item.addEventListener('click', function(e) {

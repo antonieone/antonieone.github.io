@@ -1,3 +1,7 @@
+.vissualy-hidden{
+  display: none;
+}
+
 .main{
   flex: 1 0 auto;
   position: relative;
@@ -10,7 +14,7 @@
     padding: 4rem 0;
   }&__container{
     height: 100%;
-  }&__title > h1{
+  }&__title > p{
     color: $whiteColor;
     @include titleSize;
     line-height: 2.5rem;
@@ -27,5 +31,6 @@
   .main__title{
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 }

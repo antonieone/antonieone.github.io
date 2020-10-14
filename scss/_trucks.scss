@@ -127,15 +127,16 @@
 
 @media screen and (max-width:$tablet) {
   .trucks__item-description::before {
-    width: 300px;
+    width: 280px;
   }.trucks__item-description::after {
     width: 100px;
   }
   .trucks__item-description > li{
-    margin: 0 1rem;
+    margin: 0 1.3rem;
   }
   .trucks {
     flex-flow: column;
+    font-size: 0.8rem;
     &__picture {
       flex-flow: column;
     }&__image {
